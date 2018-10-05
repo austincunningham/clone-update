@@ -31,6 +31,19 @@ echo "==========================================================================
 echo " "
 
 
+# add forking need hub installed https://hub.github.com/
+echo Do you wish to fork the integr8ly repos? y/n
+read forkYesNo
+
+if [ "$forkYesNo" = "y" ]
+then
+    for in in `cat ./clone-update/dir-list`;
+    do 
+      cd "$i";
+      git fork; 
+    done
+fi
+
 # add removes changes origin to your fork
 echo Do you wish to add a remote all integr8ly repos ? y/n
 read addRemoteYesNo
