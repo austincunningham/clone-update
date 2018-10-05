@@ -1,0 +1,15 @@
+git@github.com:integr8ly/tutorial-web-app.git
+git@github.com:integr8ly/nodejs-messaging-work-queue.git
+git@github.com:integr8ly/installation.git
+git@github.com:integr8ly/managed-service-controller.git
+git@github.com:integr8ly/managed-service-broker.git
+git@github.com:integr8ly/integration-controller.git
+git@github.com:integr8ly/walkthroughs.git
+git@github.com:integr8ly/release.git
+git@github.com:integr8ly/spboot-example.git
+git@github.com:integr8ly/launcher-booster-catalog.git
+git@github.com:integr8ly/walkthrough-operator.git
+git@github.com:integr8ly/syndesis.git
+git@github.com:integr8ly/openshift-resource-parser.git
+git@github.com:integr8ly/docs-test01.git
+git@github.com:integr8ly/installation-notes.git
