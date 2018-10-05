@@ -13,7 +13,7 @@ then
     done
 fi
 
-# find and execuits a git status
+# find and execuits a git pull upstream master 
 echo " "
 echo "=================================================================================================="
 echo " "
@@ -22,7 +22,8 @@ read updateYesNo
 
 if [ "$updateYesNo" = "y" ] 
 then
-    find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
+    find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} pull upstream master \;
+    find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} fetch upstream \;
 fi
 
 
