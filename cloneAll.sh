@@ -2,10 +2,10 @@
 
 cd ..
 
-echo Do you wish to clone all integr8ly repos ? Y/N
+echo Do you wish to clone all integr8ly repos ? y/n
 read cloneYesNo
 
-if [[ $cloneYesNo = "y"]] || [[ $cloneYesNo = "Y" ]] 
+if [[ $cloneYesNo = "y"]] 
 then
     # uses a list of repos integr8ly-list to clone all in the list
     for i in `cat ./clone-update/integr8ly-list`;
@@ -17,10 +17,10 @@ fi
 echo " "
 echo "=================================================================================================="
 echo " "
-echo Do you wish to update all integr8ly repos? Y/N
+echo Do you wish to update all integr8ly repos? y/n
 read updateYesNo
 
-if [[$updateYesNo = "y" || "Y"]]
+if [[$updateYesNo = "y" ]]
 then
     find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;
 fi
@@ -32,10 +32,10 @@ echo " "
 
 
 # add removes changes origin to your fork
-echo Do you wish to add a remote all integr8ly repos ? Y/N
+echo Do you wish to add a remote all integr8ly repos ? y/n
 read addRemoteYesNo
 
-if [[ $addRemoteYesNo = "y" ]] #|| [[ $addRemoteYesNo = "Y" ]] 
+if [[ $addRemoteYesNo = "y" ]] 
 then
     echo Enter Git user name :
     read username
