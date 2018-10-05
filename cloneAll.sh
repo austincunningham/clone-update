@@ -5,7 +5,7 @@ cd ..
 echo Do you wish to clone all integr8ly repos ? y/n
 read cloneYesNo
 
-if [[ $cloneYesNo = "y"]] 
+if [ "$cloneYesNo" = "y" ] 
 then
     # uses a list of repos integr8ly-list to clone all in the list
     for i in `cat ./clone-update/integr8ly-list`;
@@ -20,9 +20,9 @@ echo " "
 echo Do you wish to update all integr8ly repos? y/n
 read updateYesNo
 
-if [[$updateYesNo = "y" ]]
+if [ "$updateYesNo" = "y" ] 
 then
-    find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} status \;
+    find . -maxdepth 1 -type d -print -execdir git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
 fi
 
 
@@ -35,7 +35,7 @@ echo " "
 echo Do you wish to add a remote all integr8ly repos ? y/n
 read addRemoteYesNo
 
-if [[ $addRemoteYesNo = "y" ]] 
+if [ "$addRemoteYesNo" = "y" ] 
 then
     echo Enter Git user name :
     read username
