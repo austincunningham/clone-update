@@ -1,6 +1,11 @@
 # clone-update
 
-bash script for cloning, creating remotes and pulling the latest master on all integr8ly repos
+bash script for cloning, forking ,creating remotes and pulling the latest master on all integr8ly 
+
+# Prerequisites 
+
+- git
+- [hub](https://hub.github.com/) for forking
 
 ## Usage and installation
 
@@ -12,4 +17,24 @@ $ chmod 775 cloneAll.sh
 $ ./cloneAll.sh
 
 ```
+Creates the repos in the following directory structure
 
+```bash
+.
+..
+tutorial-web-app
+nodejs-messaging-work-queue
+installation
+managed-service-controller
+managed-service-broker
+integration-controller
+walkthroughs
+release
+spboot-example
+launcher-booster-catalog
+walkthrough-operator
+syndesis
+openshift-resource-parser
+docs-test01
+installation-notes
+```
