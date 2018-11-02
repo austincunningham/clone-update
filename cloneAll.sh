@@ -38,10 +38,12 @@ read forkYesNo
 
 if [ "$forkYesNo" = "y" ]
 then
-    for in in `cat ./    clone-update-integr8ly/dir-list`;
+    for i in `cat ./clone-update-integr8ly/dir-list`;
     do 
       cd "$i";
-      git fork; 
+      pwd
+      hub fork; 
+      cd ..
     done
 fi
 
