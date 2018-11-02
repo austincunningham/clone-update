@@ -8,7 +8,7 @@ read cloneYesNo
 if [ "$cloneYesNo" = "y" ] 
 then
     # uses a list of repos integr8ly-list to clone all in the list
-    for i in `cat ./clone-update/integr8ly-list`;
+    for i in `cat ./    clone-update-integr8ly/integr8ly-list`;
     do git clone "$i";
     done
 fi
@@ -38,7 +38,7 @@ read forkYesNo
 
 if [ "$forkYesNo" = "y" ]
 then
-    for in in `cat ./clone-update/dir-list`;
+    for in in `cat ./    clone-update-integr8ly/dir-list`;
     do 
       cd "$i";
       git fork; 
@@ -53,7 +53,7 @@ if [ "$addRemoteYesNo" = "y" ]
 then
     echo Enter Git user name :
     read username
-    for i in `cat ./clone-update/dir-list`;
+    for i in `cat ./      clone-update-integr8ly/dir-list`;
     do 
         cd "$i"; 
         echo "$i" repo
