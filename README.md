@@ -1,6 +1,6 @@
 # clone-update
 
-bash script for cloning, forking ,creating remotes and pulling the latest master on all integr8ly 
+bash script for cloning, forking ,creating remotes and pulling the latest master on all integr8ly repos
 
 # Prerequisites 
 
