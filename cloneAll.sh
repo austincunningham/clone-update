@@ -13,8 +13,12 @@ echo "==========================================================================
 
 cd ..
 
+echo " "
+echo "=================================================================================================="
+echo " "
 echo Do you wish to clone all integr8ly repos ? y/n
 read cloneYesNo
+
 
 if [ "$cloneYesNo" = "y" ] 
 then
@@ -23,6 +27,32 @@ then
     do git clone "$i";
     done
 fi
+
+echo " "
+echo "=================================================================================================="
+echo " "
+
+# add removes changes origin to your fork
+echo Do you wish to add a remote all integr8ly repos ? y/n
+read addRemoteYesNo
+
+if [ "$addRemoteYesNo" = "y" ] 
+then
+    echo Enter Git user name :
+    read username
+    for i in `cat ./      clone-update-integr8ly/dir-list`;
+    do 
+        cd "$i"; 
+        echo "$i" repo
+        git remote rm origin ;
+        git remote rm upstream;
+        git remote add origin git@github.com:"$username"/"$i".git;
+        git remote add upstream git@github.com:integr8ly/"$i".git
+        git remote -v
+        cd ..
+    done
+fi
+
 
 # find and execuits a git pull upstream master 
 echo " "
@@ -58,23 +88,6 @@ then
     done
 fi
 
-# add removes changes origin to your fork
-echo Do you wish to add a remote all integr8ly repos ? y/n
-read addRemoteYesNo
-
-if [ "$addRemoteYesNo" = "y" ] 
-then
-    echo Enter Git user name :
-    read username
-    for i in `cat ./      clone-update-integr8ly/dir-list`;
-    do 
-        cd "$i"; 
-        echo "$i" repo
-        git remote rm origin ;
-        git remote rm upstream;
-        git remote add origin git@github.com:"$username"/"$i".git;
-        git remote add upstream git@github.com:integr8ly/"$i".git
-        git remote -v
-        cd ..
-    done
-fi
+echo " "
+echo "=================================================================================================="
+echo " "
