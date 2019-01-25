@@ -2,6 +2,8 @@
 
 bash script for cloning, forking ,creating remotes and pulling the latest master on all integr8ly repos
 
+![running with all no answers](./run.gif)
+
 # Prerequisites 
 
 - git
